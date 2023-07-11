@@ -9,21 +9,6 @@ require 'Database/mail_db.php';
 require 'Database/message_db.php';
 require 'Database/notifiche_db.php';
 
-$prova = new Common('Franco Manco', 'Gianni Storto', 'messaggio casuale');
-var_dump($prova);
-
-
-
-
-
-
-
-$provaNotifica = new Notifiche('franco','mauro','ciao franco come stai non ti fai sentire dal milleottocentoquindici','','immagineStock');
-$provaNotifica->setAnteprima(20);
-var_dump($provaNotifica);
-
-
-
 ?>
 
 <!DOCTYPE html>

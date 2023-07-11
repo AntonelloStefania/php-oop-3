@@ -21,6 +21,7 @@ class Common{
     public function getContenuto(){
         return $this->contenuto;
     }
+
 }
 
 ?>
