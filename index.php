@@ -34,6 +34,7 @@ require 'Database/notifiche_db.php';
                 <?php }?>
                 <p><?php echo $mail->getContenuto()?></p>
                 <span><strong>Destinatario:</strong> <?php echo $mail->getDestinatario() ?></span>
+                <span><i class="<?php echo Common::$suoneria?> my-3"></i></span>
             </div>
             <?php }?>
         </div>
@@ -50,6 +51,7 @@ require 'Database/notifiche_db.php';
                                 <span><?php echo $notifica->getMittente()?></span>
                                 <span><?php echo $notifica->getAnteprima()?></span>
                             </div>
+                            <span class="text-end"><i class="<?php echo Common::$suoneria?> my-3"></i></span>
                         </li>  
                     <?php }?>
                 </ul>
@@ -65,6 +67,7 @@ require 'Database/notifiche_db.php';
                             <p class="px-2"><?php echo $messaggi->getContenuto()?></p>
                             <span class="text-end pt-3 pe-2"> <?php echo $messaggi->getInvioMessage()?></span>
                         </div>
+                        <span><i class="<?php echo Common::$suoneria?>"></i></span>
                     </div>
                 <?php }?>
             </div>

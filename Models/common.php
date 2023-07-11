@@ -3,6 +3,7 @@ class Common{
     private $mittente;
     private $destinatario;
     private $contenuto;
+    public static $suoneria = 'fa-solid fa-bell';
 
     function __construct($mittente, $destinatario, $contenuto){
         $this->mittente = $mittente;
