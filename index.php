@@ -2,80 +2,54 @@
 require 'Models/common.php';
 require 'Models/mail.php';
 require 'Models/allegato.php';
-// class Common{
-//     private $mittente;
-//     private $destinatario;
-//     private $contenuto;
+require 'Models/messaggi.php';
+require 'Models/notifiche.php';
 
-//     function __construct($mittente, $destinatario, $contenuto){
-//         $this->mittente = $mittente;
-//         $this->destinatario = $destinatario;
-//         $this->contenuto= $contenuto;
-//     }
-
-//     public function getMittente(){
-//         return $this->mittente;
-//     }
-
-//     public function getDestinatario(){
-//         return $this->destinatario;
-//     }
-
-//     public function getContenuto(){
-//         return $this->contenuto;
-//     }
-// }
+require 'mail_db.php';
 
 $prova = new Common('Franco Manco', 'Gianni Storto', 'messaggio casuale');
 var_dump($prova);
 
-// class Mail extends Common{
-//     private $allegato;
-//     private $oggetto;
 
-// function __construct($mittente, $destinatario, $contenuto, $oggetto){
-//     parent::__construct($mittente, $destinatario,$contenuto);
-//     $this->oggetto = $oggetto;
-// } 
-
-// public function getOggetto(){
-//     return $this->oggetto;
-// }
-
-// public function getAllegato(){
-//     return $this->allegato;
-// }
-
-// public function setAllegato($allegato){
-//     $this->allegato = $allegato;
-// }
-
-// }
+$provaMessaggio= new Messaggi('Paolo', 'Nicandro','we ciao grandissimo',13.49, true);
+var_dump($provaMessaggio);
 
 
 
-$provaAllegato= new Allegato('musica.zip', '44mb');
-$provamail = new Mail('franco','Mario','messaggio','comunicazione di servizio');
-$provamail -> setAllegato($provaAllegato);
-var_dump($provamail);
 
-// class Allegato{
-//     private $nome_file;
-//     private $peso_file;
+$provaNotifica = new Notifiche('franco','mauro','ciao franco come stai non ti fai sentire dal milleottocentoquindici','','immagineStock');
+$provaNotifica->setAnteprima(20);
+var_dump($provaNotifica);
 
-//     function __construct($nome_file, $peso_file){
-//         $this->nome_file = $nome_file;
-//         $this->peso_file = $peso_file;
-//     }
-
-//     public function getNomeFile(){
-//         return $this->nome_file;
-//     }
-
-//     public function getPesoFile(){
-//         return $this->peso_file;
-//     }
-// }
 
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>PHP-OOP-3</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12"></div>
+            <?php foreach($mailArray as $mail){?>
+            <div class="col-auto card">
+                <span><?php echo $mail-> getMittente() ?></span>
+                <span><?php echo $mail->getOggetto()?></span>
+                <?php  if(get_class($mail) == 'Allegato') {?>
+                    <span><?php echo 'ciao' ?></span>
+                <?php }?>
+                <p><?php echo $mail->getContenuto()?></p>
+                <span><?php echo $mail->getDestinatario() ?></span>
+            </div>
+            <?php }?>
+        </div>
+    </div>
+    
+</body>
+</html>
