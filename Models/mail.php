@@ -2,6 +2,7 @@
 class Mail extends Common{
     private $allegato;
     private $oggetto;
+  
 
 function __construct($mittente, $destinatario, $contenuto, $oggetto){
     parent::__construct($mittente, $destinatario,$contenuto);
