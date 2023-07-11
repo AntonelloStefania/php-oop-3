@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.accesso {
+    font-size: 12px;
+}
+
+.profile-pic {
+    border-radius: 5rem
+}
+
+ul {
+    list-style-type: none;
+    background-color: lightgray;
+    height: 1100px;
+    padding-top: 3rem;
+
+}
+
+li {
+    background-color: lightgray;
+    height: 70px;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+li:hover {
+    background-color: white;
+}
+
+.messages-container {
+    height: 1100px;
+
+}
+
+.right-side {
+    height: 1100px;
+    background-color: rgb(233, 233, 233);
+    border: 5px solid lightgray;
+    padding: 2rem;
+}

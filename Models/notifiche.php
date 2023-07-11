@@ -3,8 +3,8 @@ class Notifiche extends Common{
     private $icona;
     private $anteprima_messaggio;
 
-    function __construct($mittente, $destinatario,$contenuto , $anteprima_messaggio ,$icona){
-        parent::__construct($mittente, $destinatario,$contenuto);
+    function __construct($mittente, $destinatario, $contenuto , $anteprima_messaggio ,$icona){
+        parent::__construct($mittente, $destinatario, $contenuto);
         $this->icona=$icona;
         $this->anteprima_messaggio=$anteprima_messaggio;
     }

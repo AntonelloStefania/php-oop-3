@@ -8,12 +8,10 @@ $mail_2 = new Mail( 'Luigi Verdi','Franco Rossi', 'Ciao Luigi, ho bisogno del tu
 $mail_3 = new Mail( 'Paolo Russo','Franco Rossi', 'Caro Paolo, ti scrivo per chiederti un\'informazione riguardo al report che hai inviato.', 'Domanda sul report inviato');
 
 $mail_4 = new Mail( 'Laura Conti','Franco Rossi', 'Salve Laura, vorrei discutere con te l\'opportunità di collaborare per un nuovo progetto.', 'Proposta di collaborazione');
-var_dump($mail_4);
 
 $mail_5 = new Mail( 'Maria Greco','Franco Rossi', 'Ciao Maria, ti scrivo per condividere con te una scoperta scientifica interessante.', 'Scoperta scientifica da condividere');
 $allegato_2 = new Allegato('documento.pdf', '2.5mb');
 $mail_5->setAllegato($allegato_2);
-var_dump($mail_5);
 
 $mail_6 = new Mail( 'Antonio Vitale','Franco Rossi', 'Buongiorno Antonio, ho una richiesta speciale per te riguardo all\'organizzazione dell\'evento.', 'Richiesta speciale per l\'evento');
 $allegato_3 = new Allegato('foto.jpg', '1.2mb');
